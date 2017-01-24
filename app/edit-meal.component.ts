@@ -9,7 +9,7 @@ import { Meal } from './meal.model';
         <h3>Edit Meal</h3>
         <div>
           <label>Enter Meal Name:</label>
-          <input [(ngModel)]="childSelectedMeal.name">
+           <input [(ngModel)]="childSelectedMeal.name">
         </div>
         <div>
           <label>Enter Meal Description:</label><br>
