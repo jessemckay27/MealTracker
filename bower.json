@@ -3,7 +3,7 @@
   "description": "",
   "main": "",
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/jessemckay27/angular2-skeleton",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -10,11 +10,13 @@ import { Meal } from './meal.model';
       <option value="lowCalories" selected="selected">Low Calorie Meals</option>
     </select>
 
-    <div *ngFor="let currentMeal of childMealList | calories:filterByCalories">
-      <div>{{currentFood.name}}</div>
-      <div>{{currentFood.description}}</div>
-      <div>{{currentFood.calories}}</div>
-      <button (click)="editButtonHasBeenClicked(currentMeal)">Edit!</button>
+    <div>
+      <div *ngFor="let currentMeal of childMealList | calories:filterByCalories">
+        <div>{{currentMeal.name}}</div>
+        <div>{{currentMeal.description}}</div>
+        <div>{{currentMeal.calories}}</div>
+        <button (click)="editButtonHasBeenClicked(currentMeal)">Edit!</button>
+      </div>
     </div>
   `
 })
@@ -23,7 +25,7 @@ export class MealListComponent {
   @Input() childMealList: Meal[];
   @Output() clickSender = new EventEmitter();
 
-  filterByCalories: string = "allMeals";
+  filterByCalories: string = "allMfeals";
 
   editButtonHasBeenClicked(mealToEdit: Meal) {
     this.clickSender.emit(mealToEdit);
